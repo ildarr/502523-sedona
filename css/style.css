@@ -1,0 +1,28 @@
+body {
+font-family: "PTSans";
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+color: rgb(o,o,o);
+text-transform: uppercase;
+}
+
+.card-heading {
+  font-family: "PTSans";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: rgb(o,o,o);
+  text-transform: uppercase;
+}
+
+.intro {line-height: 26px;}
+
+.search-heading {
+font-family: "PTSans";
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+color: rgb(o,o,o);
+text-transform: uppercase;
+}
