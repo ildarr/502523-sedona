@@ -131,8 +131,7 @@ button {
   background-color: #f2f2f2;
 }
 
-.search-form input:hover
- {
+.search-form input:hover {
   background-color: #ebebeb;
 }
 
@@ -156,9 +155,6 @@ button {
 }
 
 .input-amount {
-  font-family: "Mariad Pro", "Regular";
-  font-size: 14px;
-  line-height: 26px;
   background-color: #f2f2f2;
 }
 
