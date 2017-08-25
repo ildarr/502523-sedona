@@ -93,8 +93,7 @@ button {
 }
 
 .brown-button:hover,
-.brown-button:focus
- {
+.brown-button:focus {
   background-color: #604e43;
 }
 
@@ -108,8 +107,7 @@ button {
 }
 
 .seagull-button:hover,
-.seagull-button:focus
- {
+.seagull-button:focus {
   background-color: #669ec0;
 }
 
@@ -135,8 +133,7 @@ button {
   background-color: #ebebeb;
 }
 
-.search-form input:focus
- {
+.search-form input:focus {
   background-color: #ffffff;
 }
 
