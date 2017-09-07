@@ -10,25 +10,22 @@
     <div class="container">
       <header class="main-header">
         <nav class="navigation">
+          <a class="navigation-logo" href="#">
+            <img src="img/logo.png" class="logo-image" width="138" height="70" alt="Логотип Седоны">
+          </a>
           <ul class="navigation-list">
             <li class="navigation-item"><a class="navigation-link" href="#">Информация</a></li>
             <li class="navigation-item"><a class="navigation-link" href="#">Фото и видео</a></li>
             <li class="navigation-item"><a class="navigation-link" href="#">Карта штата</a></li>
             <li class="navigation-item"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
           </ul>
-          <a class="navigation-logo" href="index.html">
-            <img src="img/logo.png" width="138" height="70" alt="Логотип Седоны">
-          </a>
         </nav>
       </header>
       <main class="container-main">
         <h1 class="visually-hidden">Городок Седона</h1> <!--скрытый заголовок 1 уровня -->
-        <section class="welcome">
-          <div class="welcome-image"> <!-- контейнер для фона с текстом приветствия -->
-            <img src="img/intro.jpg" class="intro-image" width="1200" height="773" alt="Фон Седоны с текстом приветствия">
-          </div>
-        </section>
-        <section class="row row-intro">
+        <div class="welcome"> <!-- для фона с текстом приветствия -->
+        </div>
+        <section class="row-intro">
           <h2 class="intro">Седона &#8212; небольшой городок в Аризоне,
             заслуживающий большего!
           </h2>
@@ -38,12 +35,11 @@
           <div class="card seagull"> <!-- 1-я причина -->
             <h2 class="card-heading">Настоящий городок</h2>
             <span class="card-number">&#8212; №1 &#8212;</span>
-            <p class="card-text">Седона не аттракцион для туристов,
+            <p class="card-text">Седона &#8212; не аттракцион для туристов,
               там течет своя жизнь
             </p>
           </div>
           <div class="row-image">
-            <img src="img/img-motel.jpg" class="motel-image" width="800" height="256" alt="Фото мотеля на фоне гор">
           </div>
         </section>
         <section class="row row-features">
@@ -53,14 +49,14 @@
               мотеле, все как в кино!
             </p>
           </div>
-          <div class="features">
-            <h2 class="card-heading features-heading food">Еда</h2>
+          <div class="features food">
+            <h2 class="card-heading features-heading">Еда</h2>
             <p class="card-text features-text">Всегда заказывайте фирменный бургер,
               вы не разочаруетесь!
             </p>
           </div>
-          <div class="features">
-            <h2 class="card-heading features-heading souvenirs">Сувениры</h2>
+          <div class="features souvenirs">
+            <h2 class="card-heading features-heading">Сувениры</h2>
             <p class="card-text features-text">Не только китайского, но и местного
               производства!
             </p>
@@ -68,14 +64,13 @@
         </section>
         <section class="row">
           <div class="card seagull"> <!-- 2-я причина -->
-            <h2 class="card-heading">Там есть мост дьявола</h2>
+            <h2 class="card-heading">&nbsp; Там есть &nbsp; мост дьявола</h2>
             <span class="card-number">&#8212; №2 &#8212;</span>
             <p class="card-text canyon-text">Да, по нему можно пройти! Если конечно
               вы осмелитесь
             </p>
           </div>
           <div class="row-image-canyon">
-            <img src="img/img-canyon.jpg" class="motel-image" width="800" height="256" alt="Фото Моста Дьявола">
           </div>
         </section>
         <section class="row">
@@ -108,31 +103,48 @@
           </p>
           <button class="search-button brown-button" type="button">Поиск гостиницы в Седоне</button>
           <div class="map">    <!-- Встраиваем карту местности-->
-            <img class="map-image" src="img/map.jpg" width="1200" height="593" alt="Карта">
           </div>
           <div class="search-container">
             <form class="search-form" action="catalog.html" method="post"> <!-- создаем форму поиска -->
-              <div class="search-input">
+              <div class="input-wrapper">
                 <label class="search-label" for="date-in">Дата заезда:</label>
-                <input type="text" class="input-date" name="check-in" id="date-in" value="24 апреля 2016">
-                <span>Календарь</span>
+                <div class="input-calendar">
+                  <input type="text" class="input-date" name="check-in" id="date-in" value="24 апреля 2017">
+                  <button class="calendar" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                      <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="search-input">
+              <div class="input-wrapper">
                 <label class="search-label" for="date-out">Дата выезда:</label>
-                <input type="text" class="input-date" name="check-out" id="date-out" value="4 июля 2016">
-                <span>Календарь</span>
+                <div class="input-calendar">
+                  <input type="text" class="input-date" name="check-out" id="date-out" value="4 июля 2017">
+                  <button class="calendar" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                      <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="search-input">
-                <label class="search-label" for="amount-adult">Взрослые:</label>
-                <button class="amount-button" type="button">-</button>
-                <input type="number" class="input-amount" name="sum-adult" id="amount-adult" value="1">
-                <button class="amount-button" type="button">+</button>
-              </div>
-              <div class="search-input">
-                <label class="search-label" for="amount-child">Дети:</label>
-                <button class="amount-button" type="button">-</button>
-                <input type="number" class="input-amount" name="sum-child" id="amount-child" value="1">
-                <button class="amount-button" type="button">+</button>
+              <div class="input-wrapper-union">
+                <div class="input-wrapper">
+                  <label class="search-label" for="amount-adult">Взрослые:</label>
+                  <div class="input-plus-minus">
+                    <button class="amount-button" type="button">&#8722;</button>
+                    <input type="text" class="input-amount" name="sum-adult" id="amount-adult" value="2">
+                    <button class="amount-button" type="button">+</button>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label class="search-label child-label" for="amount-child">Дети:</label>
+                  <div class="input-plus-minus">
+                    <button class="amount-button" type="button">&#8722;</button>
+                    <input type="text" class="input-amount" name="sum-child" id="amount-child" value="0">
+                    <button class="amount-button" type="button">+</button>
+                  </div>
+                </div>
               </div>
               <button class="form-button seagull-button" type="submit">Найти</button>
             </form>
@@ -148,7 +160,6 @@
                 Твиттер
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
-                <image overflow="visible" width="17" height="15" xlink:href="t.png"/>
                 <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
               </svg>
             </a>
@@ -169,7 +180,6 @@
                 Youtube
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
-                <image overflow="visible" width="20" height="16" xlink:href="youtube.png"/>
                 <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
               </svg>
             </a>
