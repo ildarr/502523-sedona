@@ -381,10 +381,20 @@ button {
   top: 7px;
   right: 3px;
   background-color: inherit;
+  outline: none;
 }
-
+/* стилизуем календарь */
 .calendar path {
   fill: #ababab;
+}
+
+.calendar:hover path,
+.calendar:focus path {
+  fill: #000000;
+}
+
+.calendar:active path {
+  fill: #81b3d2;
 }
 /* стилизуем инпуты внутри формы поиска */
 .search-form input {
@@ -401,6 +411,7 @@ button {
 
 .search-form input:focus {
   background-color: #ffffff;
+  outline-color: #e5e5e5;
 }
 /* стилизуем кнопки +,- */
 .amount-button {
@@ -411,6 +422,7 @@ button {
   padding-bottom: 8px;
   color: #a9a9a9;
   background-color: #f2f2f2;
+  outline: none;
 }
 
 .amount-button:hover,
