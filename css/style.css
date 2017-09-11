@@ -243,12 +243,18 @@ a {
 .featured-text {
   width: 305px;
 }
-
-/* блок поиска Гостиницы*/
-.search {
-  padding-top: 50px;
-  width: 1200px;
+/* позиционирование последней строки блока причин для скрытия смещающегося сверху вниз модального окна поиска*/
+.row-zindex {
   position: relative;
+  z-index: 30;
+}
+/* Блок поиска гостиницы
+ позиционирование заголовочной строки для скрытия смещающегося сверху вниз модального окна поиска */
+.search-row {
+  padding-top: 50px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 20;
 }
 
 .search-heading {
@@ -328,15 +334,17 @@ button {
 /* контейнер для модального окна */
 .search-container {
   margin: 0 auto;
-  padding: 54px;
+  padding: 55px;
   width: 568px;
-  height: 394px;
+  height: 395px;
   position: absolute;
-  top: 292px;
+  bottom: 198px;
   left: 316px;
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 0 25px -5px #808080;
+  display: none;
+  z-index: 10;
 }
 
 /* обертка для label + input c крнопками */
@@ -361,7 +369,7 @@ button {
 
 .child-label {
   width: 65px;
-  margin-left: 54px;
+  margin-left: 53px;
 }
 /* поля ввода даты заезда-выезда */
 .input-date {
@@ -402,7 +410,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  border: none
+  border: none;
 }
 
 .search-form input:hover {
@@ -411,8 +419,9 @@ button {
 
 .search-form input:focus {
   background-color: #ffffff;
-  outline-color: #e5e5e5;
+  outline: 2px solid #e5e5e5;
 }
+
 /* стилизуем кнопки +,- */
 .amount-button {
   font-size: 26px;
@@ -449,7 +458,7 @@ button {
 .map {
   width: 1200px;
   height: 593px;
-  background-image: url("../img/map.jpg");
+  background: #999;
 }
 
 /* отрисовываем футер */
@@ -467,7 +476,7 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9)
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-hashtag {
@@ -573,6 +582,7 @@ button {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 
 /* отрисовываем чекбоксы */
@@ -626,6 +636,7 @@ button {
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  color: inherit;
 }
 
 .price-controls {
@@ -896,4 +907,29 @@ button {
 /* рисуем линию перед футером */
 .results .row-hotel:nth-child(3) {
   border-bottom: 1px solid #e5e5e5;
+}
+
+/* добавляем анимацию для формы поиска */
+@keyframes bounce {
+  0%   { transform: translateY(-395px); }
+  70%  { transform: translateY(30px);    }
+  90%  { transform: translateY(-10px);   }
+  100% { transform: translateY(0);       }
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+/* анимация при ошибке заполнения */
+@keyframes shake {
+  0%, 100%                {transform: translateX(0);     }
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px); }
+  20%, 40%, 60%, 80%      {transform: translateX(10px);  }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }

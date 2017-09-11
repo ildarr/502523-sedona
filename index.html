@@ -73,7 +73,7 @@
           <div class="row-image-canyon">
           </div>
         </section>
-        <section class="row">
+        <section class="row row-zindex">
           <div class="card">  <!-- 3-я причина -->
             <h2 class="card-heading card-heading-grey">Небольшая площадь</h2>
             <span class="card-number">&#8212; №3 &#8212;</span>
@@ -97,15 +97,16 @@
           </div>
         </section>
         <section class="search">
-          <h2 class="search-heading">Заинтересовались?</h2>
-          <p class="search-text">Укажите предполагаемые даты поездки,<br>
+          <div class="search-row">
+            <h2 class="search-heading">Заинтересовались?</h2>
+            <p class="search-text">Укажите предполагаемые даты поездки,<br>
               и мы покажем Вам лучшие предложения гостиниц в Седоне
-          </p>
-          <button class="search-button brown-button" type="button">Поиск гостиницы в Седоне</button>
-          <div class="map">    <!-- Встраиваем карту местности-->
+            </p>
+            <button class="search-button brown-button" type="button">Поиск гостиницы в Седоне</button>
           </div>
-          <div class="search-container">
-            <form class="search-form" action="catalog.html" method="post"> <!-- создаем форму поиска -->
+
+          <div class="search-container modal-show">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post"> <!-- создаем форму поиска -->
               <div class="input-wrapper">
                 <label class="search-label" for="date-in">Дата заезда:</label>
                 <div class="input-calendar">
@@ -148,6 +149,8 @@
               </div>
               <button class="form-button seagull-button" type="submit">Найти</button>
             </form>
+          </div>
+          <div class="map" id="map-sedona">    <!-- Встраиваем карту местности-->
           </div>
         </section>
       </main>
@@ -198,5 +201,7 @@
         </p>
       </footer>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
