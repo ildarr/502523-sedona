@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function (evt) {
   if (sum_child_storage && window.localStorage) {
     sum_child.value = sum_child_storage;
   }
+  popup.classList.remove("modal-show");
 });
 
 search.addEventListener("click", function (evt) {
