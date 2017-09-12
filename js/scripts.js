@@ -1,5 +1,3 @@
-/* Выплывающее сверху вниз модальное окно */
-
 var search = document.querySelector(".search-button");
 var popup = document.querySelector(".search-container");
 var form = popup.querySelector(".form-button");
@@ -53,8 +51,6 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-/* Интерактивная карта */
 
 function initialize() {
   var mapOptions = {
