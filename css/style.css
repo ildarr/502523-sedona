@@ -73,19 +73,13 @@ a {
   width: 240px;
 }
 
-.navigation-item a {
-  display: block;
-
-  border: 0;
-}
-
-.navigation-item:nth-child(1) a,
-.navigation-item:nth-child(2) a {
+.navigation-item:nth-child(1),
+.navigation-item:nth-child(2) {
   text-align: left;
 }
 
-.navigation-item:nth-child(3) a,
-.navigation-item:nth-child(4) a {
+.navigation-item:nth-child(3),
+.navigation-item:nth-child(4) {
   text-align: right;
 }
 
@@ -532,7 +526,7 @@ a {
 .map {
   height: 593px;
 
-  background: #999999;
+  background: #999999 url("../img/map.jpg");
 }
 
 .main-footer {
@@ -913,6 +907,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
